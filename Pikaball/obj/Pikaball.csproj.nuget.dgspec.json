@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kiwon\\source\\repos\\Pikaball\\Pikaball\\Pikaball.csproj": {}
+    "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kiwon\\source\\repos\\Pikaball\\Pikaball\\Pikaball.csproj": {
+    "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kiwon\\source\\repos\\Pikaball\\Pikaball\\Pikaball.csproj",
+        "projectUniqueName": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj",
         "projectName": "Pikaball",
-        "projectPath": "C:\\Users\\kiwon\\source\\repos\\Pikaball\\Pikaball\\Pikaball.csproj",
+        "projectPath": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj",
         "packagesPath": "C:\\Users\\kiwon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kiwon\\source\\repos\\Pikaball\\Pikaball\\obj\\",
+        "outputPath": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kiwon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,11 +44,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -56,11 +56,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [

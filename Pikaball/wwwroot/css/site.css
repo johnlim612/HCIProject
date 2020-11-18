@@ -59,8 +59,7 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    
 }
 .footer {
   position: absolute;
@@ -69,3 +68,66 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*Cover page 
+------------------------------------------------------*/
+
+html, body {
+    height: 100%
+}
+
+.cover {
+    background-image: url("../resources/title.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    left: 0;
+}   
+
+/*Play page
+-------------------------------------------------------------------*/
+
+.play {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+}
+
+.Background-Sky {
+    position: absolute;
+    width: 1440px;
+    height: 576px;
+    left: 0px;
+    top: 0px;
+    background: #0099E5;
+}
+
+.Background-grass {
+    position: absolute;
+    width: 1440px;
+    height: 448px;
+    left: 0px;
+    top: 576px;
+    background: #2AAA30;
+}
+.pokeBall {
+    position: absolute;
+    width: 444px;
+    height: 399px;
+    left: 498px;
+    top: 315px;
+    background: url(image.png);
+}
+
+/*Collection page*/
+#searchBar{
+    width:50%;
+}
+
+/* identical to box height 
+color: #000000;*/

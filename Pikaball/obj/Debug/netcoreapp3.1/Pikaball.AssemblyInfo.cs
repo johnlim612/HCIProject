@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Pikaball-3D88831B-F295-40E8-ACA5-33C8BBD3DF76")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pikaball")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

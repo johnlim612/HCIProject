@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Collection";
+}
+
+<!Doctype html>
+<html>
+<head>
+
+</head>
+<body>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h1>@User.Identity.Name's Pokemon Collection</h1>
+        <div>
+            <form asp-action="Collection" method="get">
+                <div>
+                    <label for="searchBar">Search</label>
+                </div>
+                <div>
+                    <input id="searchBar" name="searchBar" type="text" />
+                    <input type="submit" value="Search Pokemon" />
+                </div>
+            </form>
+        </div>
+        <div id="searchResults">
+
+        </div>
+    }
+    else {
+        <a asp-area="Identity" asp-page="/Account/Login">An Account is required for user to view this page, please login</a>
+    } 
+
+
+</body>
+</html>
