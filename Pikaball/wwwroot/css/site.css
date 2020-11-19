@@ -5,11 +5,16 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  max-width:20%;
 }
-
+.site-navigation-bar {
+    z-index: 1;
+    background-color:deepskyblue;
+    border-bottom: 1px black solid;
+}
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
@@ -82,47 +87,13 @@ html, body {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     right: 0;
     left: 0;
+    z-index:0;
 }   
 
-/*Play page
--------------------------------------------------------------------*/
-
-.play {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    background: #FFFFFF;
-}
-
-.Background-Sky {
-    position: absolute;
-    width: 1440px;
-    height: 576px;
-    left: 0px;
-    top: 0px;
-    background: #0099E5;
-}
-
-.Background-grass {
-    position: absolute;
-    width: 1440px;
-    height: 448px;
-    left: 0px;
-    top: 576px;
-    background: #2AAA30;
-}
-.pokeBall {
-    position: absolute;
-    width: 444px;
-    height: 399px;
-    left: 498px;
-    top: 315px;
-    background: url(image.png);
-}
 
 /*Collection page*/
 #searchBar{

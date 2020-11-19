@@ -9,6 +9,7 @@
   <ItemGroup>
     <Content Remove="Views\Game\Privacy.cshtml" />
     <Content Remove="wwwroot\css\NewFile.txt" />
+    <Content Remove="wwwroot\css\StyleSheet.css" />
   </ItemGroup>
 
   <ItemGroup>

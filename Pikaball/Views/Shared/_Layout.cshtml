@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+        <nav class="site-navigation-bar navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Game" asp-action="Index">Pikaball</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Game" asp-action="Index"><img class="img-fluid" src="~/resources/Pikaball_4.png"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,22 +20,22 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Game" asp-action="Play">Play</a>
+
+                            <a class="nav-link btn-group-toggle btn-light text-dark mr-2" asp-area="" asp-controller="Game" asp-action="Play">Play</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Game" asp-action="Collection">Collection</a>
+                            <a class="nav-link btn-group-toggle btn-light text-dark" asp-area="" asp-controller="Game" asp-action="Collection">Collection</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div>
-        <main role="main">
+    <div id="rendered-page">
+        <main id="main" role="main">
             <div class="container">
                 @RenderBody()
             </div>
-            
         </main>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
