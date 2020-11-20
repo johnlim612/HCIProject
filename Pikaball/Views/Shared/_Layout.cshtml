@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="site-navigation-bar navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
+    <header class="site-navigation-bar">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Game" asp-action="Index"><img class="img-fluid" src="~/resources/Pikaball_4.png"/></a>
+                <a class="navbar-brand" asp-area="" asp-controller="Game" asp-action="Index"><img class="img-fluid" src="~/resources/Pikaball_4.png" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,6 +31,13 @@
             </div>
         </nav>
     </header>
+    <div class="page-layout-background">
+        <div class="page-background">
+            <div class="background-sky"></div>
+            <div class="background-grass"></div>
+            <img class="logo" src="~/resources/pikaball_4.png"/>
+        </div>
+    </div>
     <div id="rendered-page">
         <main id="main" role="main">
             <div class="container">

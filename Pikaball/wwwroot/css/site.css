@@ -1,6 +1,5 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
+﻿/*Navigation bar
+--------------------------------------------- */
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -8,9 +7,9 @@ a.navbar-brand {
   max-width:20%;
 }
 .site-navigation-bar {
-    z-index: 1;
     background-color:deepskyblue;
     border-bottom: 1px black solid;
+    width:100%;
 }
 /* Provide sufficient contrast against white background */
 a {
@@ -92,13 +91,46 @@ html, body {
     right: 0;
     left: 0;
     z-index:0;
-}   
-
-
-/*Collection page*/
-#searchBar{
-    width:50%;
 }
 
-/* identical to box height 
-color: #000000;*/
+/*sticky background page
+------------------------------------------------*/
+.page-layout-background {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.page-background {
+    position: sticky;
+    height: 100%;
+}
+
+.background-sky {
+    background: #0099E5;
+    width: 100%;
+    height: 70%;
+}
+
+.background-grass {
+    background: #2AAA30;
+    width: 100%;
+    height: 30%;
+}
+
+.logo {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    width: 300px;
+}
+
+#forgot-password, #register {
+    color: black;
+}
+
+#login-title {
+    margin-top: 4%;
+}
