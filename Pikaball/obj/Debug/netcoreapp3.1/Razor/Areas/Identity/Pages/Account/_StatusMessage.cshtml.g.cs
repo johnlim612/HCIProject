@@ -34,6 +34,13 @@ using Pikaball.Areas.Identity.Pages;
 #line hidden
 #nullable disable
 #nullable restore
+#line 5 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+using Pikaball.Areas.Identity.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using Pikaball.Areas.Identity.Pages.Account;
 
@@ -41,7 +48,7 @@ using Pikaball.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0723a602e84d5a261d35f2702dcc54883c69cad5", @"/Areas/Identity/Pages/Account/_StatusMessage.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"424dd2a2628d349d1fd2d2cdb6d6cf55f6ed6961", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c823704939af4f93da36fe81d80d4e62cc42115f", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea26e38af936ecd65a35d9a0d3aeba65131ae79a", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__StatusMessage : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<string>
     {

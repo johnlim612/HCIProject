@@ -34,6 +34,13 @@ using Pikaball.Areas.Identity.Pages;
 #line hidden
 #nullable disable
 #nullable restore
+#line 5 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+using Pikaball.Areas.Identity.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using Pikaball.Areas.Identity.Pages.Account;
 
@@ -41,7 +48,7 @@ using Pikaball.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fc515fe020d54661554d176b8ff5678a88bef10d", @"/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"424dd2a2628d349d1fd2d2cdb6d6cf55f6ed6961", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c823704939af4f93da36fe81d80d4e62cc42115f", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ea26e38af936ecd65a35d9a0d3aeba65131ae79a", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_ConfirmEmailChange : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -87,7 +94,7 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("</h1>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc515fe020d54661554d176b8ff5678a88bef10d4677", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fc515fe020d54661554d176b8ff5678a88bef10d4883", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
