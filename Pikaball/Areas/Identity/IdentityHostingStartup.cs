@@ -20,8 +20,15 @@ namespace Pikaball.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDBContextConnection")));
 
-                //services.AddDefaultIdentity<PikaballUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                //    .AddEntityFrameworkStores<AuthDBContext>();
+                services.AddDefaultIdentity<PikaballUser>(options => {
+                    options.SignIn.RequireConfirmedAccount = false;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+
+                })
+                    .AddEntityFrameworkStores<AuthDBContext>();
             });
         }
     }

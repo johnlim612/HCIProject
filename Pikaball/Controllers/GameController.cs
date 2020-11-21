@@ -25,12 +25,11 @@ namespace Pikaball.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         public IActionResult Play()
         {
             return View();
         }
-        [AllowAnonymous]
+
         [HttpGet]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Collection()
