@@ -8971,19 +8971,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kiwon\\.nuget\\packages\\": {}
+    "C:\\Users\\johnl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj",
+      "projectUniqueName": "C:\\Users\\johnl\\Documents\\GitHub\\HCIProject\\Pikaball\\Pikaball.csproj",
       "projectName": "Pikaball",
-      "projectPath": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\Pikaball.csproj",
-      "packagesPath": "C:\\Users\\kiwon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kiwon\\source\\repos\\HCIProject\\Pikaball\\obj\\",
+      "projectPath": "C:\\Users\\johnl\\Documents\\GitHub\\HCIProject\\Pikaball\\Pikaball.csproj",
+      "packagesPath": "C:\\Users\\johnl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\johnl\\Documents\\GitHub\\HCIProject\\Pikaball\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kiwon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\johnl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8995,7 +8995,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9007,7 +9006,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -9058,7 +9056,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,35 +13,35 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 1 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 2 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
 using Pikaball.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 3 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
 using Pikaball.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
+#line 5 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\_ViewImports.cshtml"
 using Pikaball.Areas.Identity.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\Account\_ViewImports.cshtml"
+#line 1 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using Pikaball.Areas.Identity.Pages.Account;
 
 #line default
@@ -93,7 +93,7 @@ using Pikaball.Areas.Identity.Pages.Account;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 4 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\Account\Login.cshtml"
+#line 4 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\Account\Login.cshtml"
   
     ViewData["Title"] = "Log in";
 
@@ -102,7 +102,7 @@ using Pikaball.Areas.Identity.Pages.Account;
 #nullable disable
             WriteLiteral("\r\n<h1>");
 #nullable restore
-#line 8 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Areas\Identity\Pages\Account\Login.cshtml"
+#line 8 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Areas\Identity\Pages\Account\Login.cshtml"
 Write(ViewData["Title"]);
 
 #line default

@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Views\_ViewImports.cshtml"
 using Pikaball;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\kiwon\source\repos\HCIProject\Pikaball\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\johnl\Documents\GitHub\HCIProject\Pikaball\Views\_ViewImports.cshtml"
 using Pikaball.Models;
 
 #line default
