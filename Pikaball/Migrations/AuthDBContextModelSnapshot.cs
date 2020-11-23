@@ -8,7 +8,7 @@ using Pikaball.Data;
 
 namespace Pikaball.Migrations
 {
-    [DbContext(typeof(AuthDBContext))]
+    [DbContext(typeof(PokemonDBContext))]
     partial class AuthDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

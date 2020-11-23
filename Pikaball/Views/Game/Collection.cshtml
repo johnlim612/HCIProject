@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="~/css/collection.css" />
 </head>
 <body>
-    <div class="mt-lg-5"></div>
-    <h1>@User.Identity.Name's Pokemon Collection</h1>
-    <div>
-        <form asp-action="Collection" method="get">
-            <div>
-                <label for="searchBar">Search</label>
-            </div>
-            <div>
-                <input id="searchBar" name="searchBar" type="text" />
-                <input type="submit" value="Search Pokemon" />
-            </div>
-        </form>
-    </div>
-    <div id="searchResults">
+    <div class="user-authorization-container">
+        <h1 class="user-authorization-title">@User.Identity.Name's Pokemon Collection</h1>
+        <div>
+            <!--Search bar for pokemon search within user's collection-->
+            <form asp-action="Collection" method="get">
+                <div>
+                    <label for="searchBar">Search</label>
+                </div>
+                <div>
+                    <input id="searchBar" name="searchBar" type="text" />
+                    <input type="submit" value="Search Pokemon" />
+                </div>
+            </form>
+        </div>
+        <!--Search result box-->
+        <div id="searchResults">
 
+        </div>
     </div>
+    
 </body>
 </html>

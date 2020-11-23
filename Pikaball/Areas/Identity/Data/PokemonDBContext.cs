@@ -9,9 +9,9 @@ using Pikaball.Areas.Identity.Data;
 
 namespace Pikaball.Data
 {
-    public class AuthDBContext : IdentityDbContext<PikaballUser>
+    public class PokemonDBContext : IdentityDbContext<PikaballUser>
     {
-        public AuthDBContext(DbContextOptions<AuthDBContext> options)
+        public PokemonDBContext(DbContextOptions<PokemonDBContext> options)
             : base(options)
         {
         }

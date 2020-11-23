@@ -9,7 +9,7 @@ using Pikaball.Data;
 
 namespace Pikaball.Migrations
 {
-    [DbContext(typeof(AuthDBContext))]
+    [DbContext(typeof(PokemonDBContext))]
     [Migration("20201121033030_Initial-Create")]
     partial class InitialCreate
     {

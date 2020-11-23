@@ -16,7 +16,7 @@ namespace Pikaball.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<AuthDBContext>(options =>
+                services.AddDbContext<PokemonDBContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDBContextConnection")));
 
@@ -28,7 +28,7 @@ namespace Pikaball.Areas.Identity
                     options.Password.RequireUppercase = false;
 
                 })
-                    .AddEntityFrameworkStores<AuthDBContext>();
+                    .AddEntityFrameworkStores<PokemonDBContext>();
             });
         }
     }

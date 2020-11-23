@@ -47,6 +47,7 @@
     width: 5%;
     height: 60%;
     text-align: center;
+    display: none;
 }
 
 #history-text{
@@ -105,7 +106,7 @@
         transform: scale(1.2)
     }
 
-    80% {
+    95% {
         opacity: 0
     }
 
@@ -114,13 +115,42 @@
     }
 }
 
+.summon-pokemon {
+    width: 25%;
+    position: absolute;
+    bottom: 120px;
+    border-radius: 2000px;
+    z-index: 1;
+    box-shadow: 0 0 0vw 0vw rgba(241,244,0,0);
+    /*box-shadow: 0 0 30vw 40vw rgba(241,244,0,0);*/
+}
+
+.summon-animation {
+    z-index: 2;
+    
+}
+
+@keyframes summon {
+    25%, 35% {
+        box-shadow: 0 0 30vw 40vw rgba(255,255,255,1);
+    }
+
+    70% {
+        box-shadow: 0 0 0vw 0vw rgba(241,244,0,0);
+    }
+
+
+
+    /*45%, 55% {
+        box-shadow: 0 0 0 0px rgba(255,255,255,1);
+    }*/
+}
 
 @media only screen and (max-width: 990px) {
     .arrow {
         transform: rotate(35deg);
         width: 180px;
     }
-    
 }
 
 

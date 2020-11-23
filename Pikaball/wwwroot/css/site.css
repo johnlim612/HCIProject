@@ -7,10 +7,27 @@ a.navbar-brand {
   max-width:20%;
 }
 .site-navigation-bar {
-    background-color:deepskyblue;
+    background-color: dodgerblue;
     border-bottom: 1px black solid;
     width:100%;
+    z-index: 2;
 }
+
+.logo {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    width: 300px;
+}
+
+.navi-button {
+    color: black !important;
+    background-color: white;
+    border-radius: 2px;
+    font-weight: 500;
+    border: 1px solid black;
+}
+
 /* Provide sufficient contrast against white background */
 a {
     color: #0366d6;
@@ -100,37 +117,54 @@ html, body {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: -1;
+    z-index:-1;
 }
 
 .page-background {
+    background-image: url("../resources/background-hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    filter: blur(3px);
     position: sticky;
     height: 100%;
 }
 
 .background-sky {
+    display:none;
     background: #0099E5;
     width: 100%;
     height: 70%;
+    filter: blur(3px);
 }
 
 .background-grass {
+    display: none;
     background: #2AAA30;
     width: 100%;
     height: 30%;
+    filter: blur(8px);
 }
 
-.logo {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    width: 300px;
+
+/*User login and registeration styling*/
+.user-authorization-title {
+    margin-top: 3%;
+}
+.user-authorization-container {
+    margin-top: 3%;
+    width:70%;
+    background-color:rgba(255, 255, 255, 0.8);
+    padding:10pt;
+    border-radius:20px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #forgot-password, #register {
     color: black;
-}
-
-#login-title {
-    margin-top: 4%;
 }
