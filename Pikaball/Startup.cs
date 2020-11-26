@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Pikaball.Areas.Identity.Data;
 
 namespace Pikaball
 {
@@ -28,14 +29,17 @@ namespace Pikaball
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddMvc(options =>
             {
                 // This pushes users to login if not authenticated
                 options.Filters.Add(new AuthorizeFilter());
             });
-            services.AddControllersWithViews();
-            services.AddRazorPages();
 
+            //add db context
+            services.AddDbContext<PokemonDBContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("PokemonDBContextConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

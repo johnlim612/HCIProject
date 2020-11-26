@@ -10,8 +10,8 @@ using Pikaball.Data;
 namespace Pikaball.Migrations
 {
     [DbContext(typeof(PokemonDBContext))]
-    [Migration("20201121033030_Initial-Create")]
-    partial class InitialCreate
+    [Migration("20201126074345_Pokemon Collection")]
+    partial class PokemonCollection
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -221,6 +221,52 @@ namespace Pikaball.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Pikaball.Models.PokemonCollection", b =>
+                {
+                    b.Property<int>("PokedexID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("EvCondition")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("EvolutionUnlocked")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasNextEvolution")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastDrawn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SpriteUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type1")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Type2")
+                        .HasColumnType("int");
+
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("level")
+                        .HasColumnType("int");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PokedexID", "UserID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("PokemonCollections");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -268,6 +314,15 @@ namespace Pikaball.Migrations
                     b.HasOne("Pikaball.Areas.Identity.Data.PikaballUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Pikaball.Models.PokemonCollection", b =>
+                {
+                    b.HasOne("Pikaball.Areas.Identity.Data.PikaballUser", "PikaballUser")
+                        .WithMany("PokemonCollections")
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

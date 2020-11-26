@@ -16,11 +16,8 @@ namespace Pikaball.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<PokemonDBContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("AuthDBContextConnection")));
-
                 services.AddDefaultIdentity<PikaballUser>(options => {
+                    options.User.RequireUniqueEmail = true;
                     options.SignIn.RequireConfirmedAccount = false;
                     options.Password.RequireLowercase = false;
                     options.Password.RequireDigit = false;

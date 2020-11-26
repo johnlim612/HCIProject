@@ -1,0 +1,81 @@
+﻿@model Pikaball.Models.PokemonCollection
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>PokemonCollection</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PokedexID" />
+            <input type="hidden" asp-for="UserID" />
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="level" class="control-label"></label>
+                <input asp-for="level" class="form-control" />
+                <span asp-validation-for="level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastDrawn" class="control-label"></label>
+                <input asp-for="LastDrawn" class="form-control" />
+                <span asp-validation-for="LastDrawn" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasNextEvolution" /> @Html.DisplayNameFor(model => model.HasNextEvolution)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EvCondition" class="control-label"></label>
+                <input asp-for="EvCondition" class="form-control" />
+                <span asp-validation-for="EvCondition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EvolutionUnlocked" class="control-label"></label>
+                <input asp-for="EvolutionUnlocked" class="form-control" />
+                <span asp-validation-for="EvolutionUnlocked" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpriteUrl" class="control-label"></label>
+                <input asp-for="SpriteUrl" class="form-control" />
+                <span asp-validation-for="SpriteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type1" class="control-label"></label>
+                <select asp-for="Type1" class="form-control"></select>
+                <span asp-validation-for="Type1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type2" class="control-label"></label>
+                <input asp-for="Type2" class="form-control" />
+                <span asp-validation-for="Type2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

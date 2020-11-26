@@ -114,21 +114,35 @@
         opacity: 0
     }
 }
-
-.summon-pokemon {
-    width: 25%;
+.pokemon-result {
+    display: flex;
     position: absolute;
-    bottom: 120px;
-    border-radius: 2000px;
+    flex-direction: column;
+    width: 344px;
     z-index: 1;
+    margin: auto;
+}
+.summon-pokemon {
+    width: 100%;
+    bottom: 30%;
+    border-radius: 2000px;
     box-shadow: 0 0 0vw 0vw rgba(241,244,0,0);
     /*box-shadow: 0 0 30vw 40vw rgba(241,244,0,0);*/
 }
 
-.summon-animation {
+.endsummon-btn {
     z-index: 2;
-    
+    bottom: 33%;
+    width: 100%;
 }
+
+.pokemon-label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 1%;
+}
+
 
 @keyframes summon {
     25%, 35% {

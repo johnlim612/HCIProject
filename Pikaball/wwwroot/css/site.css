@@ -19,16 +19,27 @@ a.navbar-brand {
     left: 16px;
     width: 300px;
 }
-
-.navi-button {
+/*.navi-button {
     color: black !important;
     background-color: white;
     border-radius: 2px;
     font-weight: 500;
     border: 1px solid black;
+}*/
+
+.navi-button {
+    color: black !important;
+    background-color: white !important;
+    font-weight: 500;
+    font-size: 1.2em;
+    border: solid 1px black !important;
 }
 
-/* Provide sufficient contrast against white background */
+    .navi-button:hover {
+        background-color: dodgerblue !important;
+    }
+
+    /* Provide sufficient contrast against white background */
 a {
     color: #0366d6;
 }
