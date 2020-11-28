@@ -5,18 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Pikaball.Data;
 using Pikaball.Models;
 
 namespace Pikaball.Controllers
 {
     public class GameController : Controller
     {
-        private readonly ILogger<GameController> _logger;
+        private readonly PokemonDBContext _context;
 
-        public GameController(ILogger<GameController> logger)
+        public GameController(PokemonDBContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         /*Coverpage*/
@@ -35,13 +38,35 @@ namespace Pikaball.Controllers
             return View();
         }
 
-        /*Collection page, get request for user pokemon collection, Requires login*/
-        [HttpGet]
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Collection()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Play([Bind("PokedexID,UserID,name,description,level,LastDrawn,HasNextEvolution,EvCondition,EvolutionUnlocked,SpriteUrl,Type1,Type2")] PokemonCollection pokemonCollection)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _context.Add(pokemonCollection);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["UserID"] = new SelectList(_context.PikaballUsers, "Id", "Id", pokemonCollection.UserID);
+            return View(pokemonCollection);
+
         }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public async Task<IActionResult> Collection(string searchString)
+        {
+            ViewData["CurrentFilter"] = searchString;
+            var pokemonDBContext = from s in _context.PokemonCollections
+                                   select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                pokemonDBContext = pokemonDBContext.Where(s => s.name.Contains(searchString));
+            }
+            pokemonDBContext = pokemonDBContext.OrderByDescending(s => s.LastDrawn);
+            return View(await pokemonDBContext.ToListAsync());
+        }
+
 
         /*Error page*/
         [AllowAnonymous]

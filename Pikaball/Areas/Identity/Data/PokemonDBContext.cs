@@ -38,6 +38,12 @@ namespace Pikaball.Data
         }
     }
 
+    /// <summary>
+    /// This factory class is for bypassing the problem where no parameterless constructor existed for
+    /// PokemonDBContext. This was an error that shouldn't have happened, however it did. 
+    /// Probably due to an internal error from VisualStudio Asp.net core mvc
+    /// trying to do something that it shouldn't have been doing.
+    /// </summary>
     public class PokemonDBContextFactory : IDesignTimeDbContextFactory<PokemonDBContext>
     {
         public PokemonDBContext CreateDbContext(string[] args)

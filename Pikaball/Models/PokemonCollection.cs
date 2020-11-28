@@ -36,30 +36,9 @@ namespace Pikaball.Models
         public int? EvCondition { get; set; }
         public Boolean? EvolutionUnlocked { get; set; }
         public string SpriteUrl { get; set; }
-        public PokemonType Type1 { get; set; }
-        public PokemonType? Type2 { get; set; }
+        public string Type1 { get; set; }
+        #nullable enable
+        public string? Type2 { get; set; }
 
-    }
-
-    public enum PokemonType
-    {
-        Normal,
-        Fire,
-        Fighting,
-        Water,
-        Flying,
-        Grass,
-        Poison,
-        Electric,
-        Ground,
-        Psychic,
-        Rock,
-        Ice,
-        Bug,
-        Dragon,
-        Ghost,
-        Dark,
-        Steel,
-        Fairy
     }
 }

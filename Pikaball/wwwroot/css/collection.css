@@ -1,3 +1,47 @@
-﻿#searchBar {
+﻿html {
+    height:100%;
+}
+body {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#searchBar {
     width: 50%;
+}
+
+.pokemon-collection-grid {
+    background: rgba(255,255,255,0.8);
+    margin-top: 1%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokemon-collection-grid-item {
+    padding:1%;
+    background: rgba(118, 193, 231, 0.8);
+    border-radius:10px;
+    margin:1%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:fit-content;
+    text-align:center;
+    width:10%;
+}
+.pokemon-image {
+    width:80%;
+}
+.pName {
+    color:blue;
+}
+.undisplay-bullet {
+    display: block;
+    padding: 0;
+}
+.list-styling {
+    
+    list-style-type: none;
 }

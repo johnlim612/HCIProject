@@ -1,4 +1,4 @@
-﻿@model Pikaball.Models.PokemonCollection
+﻿@model IEnumerable<Pikaball.Models.PokemonCollection>
 @{
     ViewData["Title"] = "Collection";
 }
@@ -15,19 +15,28 @@
             <!--Search bar for pokemon search within user's collection-->
             <form asp-action="Collection" method="get">
                 <div>
-                    <label for="searchBar">Search</label>
+                    <label for="searchBar">Search Pokemon by Name:</label>
                 </div>
                 <div>
-                    <input id="searchBar" name="searchBar" type="text" />
+                    <input id="searchBar" name="SearchString" type="text" value="@ViewData["CurrentFilter"]"/>
                     <input type="submit" value="Search Pokemon" />
                 </div>
             </form>
         </div>
-        <!--Search result box-->
-        <div id="searchResults">
-
-        </div>
     </div>
-    
+    <!--Search result box-->
+    <div id="searchResults" class="pokemon-collection-grid">
+        @foreach (var item in Model)
+        {
+            <div class="pokemon-collection-grid-item">
+                <img class="pokemon-image" src="@Html.DisplayFor(modelItem => item.SpriteUrl)" />
+                <ul class="undisplay-bullet">
+                    <li class="list-styling pName">@Html.DisplayFor(modelItem => item.name)</li>
+                    <li class="list-styling">Level:@Html.DisplayFor(modelItem => item.level)</li>
+                </ul>
+            </div>
+        }
+    </div>
+
 </body>
 </html>

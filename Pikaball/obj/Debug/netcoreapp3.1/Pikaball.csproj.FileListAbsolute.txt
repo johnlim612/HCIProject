@@ -959,3 +959,8 @@ C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.pdb
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.genruntimeconfig.cache
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.csprojAssemblyReference.cache
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Create.cshtml.g.cs
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Delete.cshtml.g.cs
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Details.cshtml.g.cs
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Edit.cshtml.g.cs
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Index.cshtml.g.cs

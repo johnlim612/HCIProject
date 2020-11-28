@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pikaball.Data;
 
 namespace Pikaball.Migrations
 {
     [DbContext(typeof(PokemonDBContext))]
-    partial class PokemonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20201127132113_add bulbasaur to account")]
+    partial class addbulbasaurtoaccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -238,11 +240,11 @@ namespace Pikaball.Migrations
                     b.Property<string>("SpriteUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Type1")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Type1")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Type2")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Type2")
+                        .HasColumnType("int");
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(max)");

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pikaball.Data;
 
 namespace Pikaball.Migrations
 {
     [DbContext(typeof(PokemonDBContext))]
-    partial class PokemonDBContextModelSnapshot : ModelSnapshot
+    [Migration("20201127133100_change table structure")]
+    partial class changetablestructure
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
