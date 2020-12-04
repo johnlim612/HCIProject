@@ -7,17 +7,26 @@
     // when user clicks on pokeball simulate summon
     $(".pokeball").click(() => {
         $(".pokeball").css("display", "none");
-        $(".summon-pokemon").css("display", "inline");
-        $(".summon-pokemon").css("animation", "summon 2s linear");
-        $(".summon-pokemon").attr("src", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
-        $(".pokemon-label").text("The Pokemon name goes here" + "!");
-        $(".pokemon-label").css("display", "block");
-
-        //run when summon animation ends
-        $(".summon-pokemon").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-            function () {
-                $(".endsummon-btn").show();
-            });
+        $("#loading-text").text("Loading...");
+        
+        updatePokemonCollection().then(() => {
+            getPokemon().then((value) => {
+                addPokemon();
+                $("#loading-text").text("");
+                $(".summon-pokemon").css("animation", "summon 1.5s linear");
+                $(".summon-pokemon").attr("src", rolledPokemon.spriteUrl);
+                $(".summon-pokemon").css("display", "inline");
+                //run when summon animation ends
+                $(".pokemon-label").css("display", "inline-block");
+                $(".pokemon-label").text(rolledPokemon.name + "!");
+                $(".summon-pokemon").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+                    function () {
+                        //$(".pokemon-result").css("background", "rgba(255, 255, 255, 0.8)");
+                        $(".endsummon-btn").show();
+                    }
+                );
+            })
+        });
     });
 
     //hides summon display material
@@ -26,8 +35,6 @@
         $(".pokeball").css("display", "block");
         $(".endsummon-btn").hide();
         $(".pokemon-label").css("display", "none");
-
-
-
+        //$(".pokemon-result").css("background", "none");
     }
 });

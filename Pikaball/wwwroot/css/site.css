@@ -136,12 +136,12 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment:fixed;
     position: absolute;
     right: 0;
     left: 0;
     z-index: -2;
     filter: blur(3px);
-    position: sticky;
     height: 100%;
 }
 

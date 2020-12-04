@@ -48,6 +48,11 @@ namespace Pikaball.Controllers
         // GET: PokemonCollections/Create
         public IActionResult Create()
         {
+            PokemonCollection pokemon = new PokemonCollection();
+            pokemon.UserID = ViewBag.UserID;
+            pokemon.PokedexID = 2;
+            pokemon.level = 1;
+            pokemon.LastDrawn = DateTime.Now;
             ViewData["UserID"] = new SelectList(_context.PikaballUsers, "Id", "Id");
             return View();
         }
@@ -59,7 +64,6 @@ namespace Pikaball.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PokedexID,UserID,name,description,level,LastDrawn,HasNextEvolution,EvCondition,EvolutionUnlocked,SpriteUrl,Type1,Type2")] PokemonCollection pokemonCollection)
         {
-            string userid = ViewBag.UserID;
             if (ModelState.IsValid)
             {
                 _context.Add(pokemonCollection);

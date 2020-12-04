@@ -25,18 +25,29 @@
         </div>
     </div>
     <!--Search result box-->
-    <div id="searchResults" class="pokemon-collection-grid">
+    <div id="searchResults" class="pokemon-collection-grid scrollbar-near-moon">
         @foreach (var item in Model)
         {
-            <div class="pokemon-collection-grid-item">
-                <img class="pokemon-image" src="@Html.DisplayFor(modelItem => item.SpriteUrl)" />
-                <ul class="undisplay-bullet">
-                    <li class="list-styling pName">@Html.DisplayFor(modelItem => item.name)</li>
-                    <li class="list-styling">Level:@Html.DisplayFor(modelItem => item.level)</li>
-                </ul>
+        <div class="pokemon-collection-grid-item">
+            <div class="info-hover">
+                <li class="list-styling description">@Html.DisplayFor(modelItem => item.description)</li>
+                <li class="list-styling">Type 1: @Html.DisplayFor(modelItem => item.Type1)</li>
+                @if (!String.IsNullOrEmpty(item.Type2))
+                {
+                    <li class="list-styling">Type 2: @Html.DisplayFor(modelItem => item.Type2)</li>
+                }
             </div>
+            <img class="pokemon-image" src="@Html.DisplayFor(modelItem => item.SpriteUrl)" />
+            <ul class="undisplay-bullet">
+                <li class="list-styling pName">@Html.DisplayFor(modelItem => item.name)</li>
+                <li class="list-styling">Level:@Html.DisplayFor(modelItem => item.level)</li>
+               
+            </ul>
+        </div>
         }
     </div>
 
+    <script>
+    </script>
 </body>
 </html>

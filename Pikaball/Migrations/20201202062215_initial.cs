@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Pikaball.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -92,8 +92,8 @@ namespace Pikaball.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -137,8 +137,8 @@ namespace Pikaball.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -147,6 +147,35 @@ namespace Pikaball.Migrations
                     table.ForeignKey(
                         name: "FK_AspNetUserTokens_AspNetUsers_UserId",
                         column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PokemonCollections",
+                columns: table => new
+                {
+                    PokedexID = table.Column<int>(nullable: false),
+                    UserID = table.Column<string>(nullable: false),
+                    name = table.Column<string>(nullable: false),
+                    description = table.Column<string>(nullable: true),
+                    level = table.Column<int>(nullable: false),
+                    LastDrawn = table.Column<DateTime>(nullable: false),
+                    EvolutionCondition = table.Column<int>(nullable: true),
+                    EvolutionUnlocked = table.Column<bool>(nullable: true),
+                    SpriteUrl = table.Column<string>(nullable: true),
+                    Type1 = table.Column<string>(nullable: true),
+                    Type2 = table.Column<string>(nullable: true),
+                    isMythical = table.Column<bool>(nullable: false),
+                    isLegendary = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PokemonCollections", x => new { x.PokedexID, x.UserID });
+                    table.ForeignKey(
+                        name: "FK_PokemonCollections_AspNetUsers_UserID",
+                        column: x => x.UserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -190,6 +219,11 @@ namespace Pikaball.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PokemonCollections_UserID",
+                table: "PokemonCollections",
+                column: "UserID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -208,6 +242,9 @@ namespace Pikaball.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "PokemonCollections");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

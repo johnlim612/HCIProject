@@ -16,6 +16,12 @@ namespace Pikaball.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
+
+                //This part removes the password requirements such as 
+                //capital letter, or special characters
+                //
+                //Makes it so that unique email address are required for each user.
+                //It also turns off the account confirmation requirement
                 services.AddDefaultIdentity<PikaballUser>(options => {
                     options.User.RequireUniqueEmail = true;
                     options.SignIn.RequireConfirmedAccount = false;

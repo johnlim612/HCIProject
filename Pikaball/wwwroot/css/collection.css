@@ -1,11 +1,4 @@
-﻿html {
-    height:100%;
-}
-body {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
+﻿
 
 #searchBar {
     width: 50%;
@@ -15,21 +8,30 @@ body {
     background: rgba(255,255,255,0.8);
     margin-top: 1%;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    padding: 1%;
+    height: 55%;
+    overflow: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    left: 1%;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
 
 .pokemon-collection-grid-item {
-    padding:1%;
+    padding: 1%;
     background: rgba(118, 193, 231, 0.8);
-    border-radius:10px;
-    margin:1%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    height:fit-content;
-    text-align:center;
-    width:10%;
+    border-radius: 10px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 .pokemon-image {
     width:80%;
@@ -45,3 +47,52 @@ body {
     
     list-style-type: none;
 }
+
+.description {
+    background:rgba(255, 255, 255, 0.8);
+    padding:1px;
+}
+
+.scrollbar-near-moon::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scrollbar-near-moon::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-near-moon::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#b490ca));
+    background-image: -webkit-linear-gradient(bottom, #5ee7df 0%, #b490ca 100%);
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.scrollbar-near-moon {
+    scrollbar-color: #b490ca #F5F5F5;
+}
+
+.user-authorization-title {
+    margin-top: 0;
+}
+
+.info-hover {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: -10%;
+    border: 1px solid grey;
+    background-color: #eee;
+    z-index: 10;
+    border-radius: 3px;
+    width: 120%;
+}
+
+.pokemon-collection-grid-item:hover > .info-hover {
+    display: block;
+}
+

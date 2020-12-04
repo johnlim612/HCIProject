@@ -10,8 +10,8 @@ using Pikaball.Data;
 namespace Pikaball.Migrations
 {
     [DbContext(typeof(PokemonDBContext))]
-    [Migration("20201123070552_Initial")]
-    partial class Initial
+    [Migration("20201202062215_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -99,12 +99,10 @@ namespace Pikaball.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -141,12 +139,10 @@ namespace Pikaball.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -221,6 +217,55 @@ namespace Pikaball.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Pikaball.Models.PokemonCollection", b =>
+                {
+                    b.Property<int>("PokedexID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("EvolutionCondition")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("EvolutionUnlocked")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastDrawn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SpriteUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isLegendary")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isMythical")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("level")
+                        .HasColumnType("int");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PokedexID", "UserID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("PokemonCollections");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -268,6 +313,15 @@ namespace Pikaball.Migrations
                     b.HasOne("Pikaball.Areas.Identity.Data.PikaballUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Pikaball.Models.PokemonCollection", b =>
+                {
+                    b.HasOne("Pikaball.Areas.Identity.Data.PikaballUser", "PikaballUser")
+                        .WithMany("PokemonCollections")
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

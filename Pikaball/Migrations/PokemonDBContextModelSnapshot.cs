@@ -223,13 +223,10 @@ namespace Pikaball.Migrations
                     b.Property<string>("UserID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("EvCondition")
+                    b.Property<int?>("EvolutionCondition")
                         .HasColumnType("int");
 
                     b.Property<bool?>("EvolutionUnlocked")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("HasNextEvolution")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LastDrawn")
@@ -246,6 +243,12 @@ namespace Pikaball.Migrations
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isLegendary")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isMythical")
+                        .HasColumnType("bit");
 
                     b.Property<int>("level")
                         .HasColumnType("int");

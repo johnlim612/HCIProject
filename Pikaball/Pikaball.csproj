@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -9,18 +9,28 @@
   <ItemGroup>
     <Compile Remove="bin\**" />
     <Compile Remove="obj\**" />
+    <Compile Remove="Views\Home\**" />
+    <Compile Remove="Views\PokemonCollections\**" />
     <Content Remove="bin\**" />
     <Content Remove="obj\**" />
+    <Content Remove="Views\Home\**" />
+    <Content Remove="Views\PokemonCollections\**" />
     <EmbeddedResource Remove="bin\**" />
     <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="Views\Home\**" />
+    <EmbeddedResource Remove="Views\PokemonCollections\**" />
     <None Remove="bin\**" />
     <None Remove="obj\**" />
+    <None Remove="Views\Home\**" />
+    <None Remove="Views\PokemonCollections\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\PokemonCollectionsController.cs" />
     <Compile Remove="Data\ApplicationDbContext.cs" />
     <Compile Remove="Migrations\20201126065817_Pokemon Collection.cs" />
     <Compile Remove="Migrations\20201126065817_Pokemon Collection.Designer.cs" />
+    <Compile Remove="Models\SeedData.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +38,10 @@
     <Content Remove="wwwroot\css\NewFile.txt" />
     <Content Remove="wwwroot\css\StyleSheet.css" />
     <Content Remove="wwwroot\js\NewFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Game\NewFile.txt" />
   </ItemGroup>
 
   <ItemGroup>

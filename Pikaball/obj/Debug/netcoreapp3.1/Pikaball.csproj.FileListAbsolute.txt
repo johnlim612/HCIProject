@@ -944,7 +944,6 @@ C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Ar
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Game\Collection.cshtml.g.cs
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Game\Index.cshtml.g.cs
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Game\Play.cshtml.g.cs
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -959,8 +958,4 @@ C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.pdb
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.genruntimeconfig.cache
 C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Pikaball.csprojAssemblyReference.cache
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Create.cshtml.g.cs
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Delete.cshtml.g.cs
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Details.cshtml.g.cs
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Edit.cshtml.g.cs
-C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\PokemonCollections\Index.cshtml.g.cs
+C:\Users\kiwon\source\repos\HCIProject\Pikaball\obj\Debug\netcoreapp3.1\Razor\Views\Game\HowTo.cshtml.g.cs

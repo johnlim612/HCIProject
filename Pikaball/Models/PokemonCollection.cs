@@ -31,14 +31,19 @@ namespace Pikaball.Models
         [DataType(DataType.Date)]
         public DateTime LastDrawn { get; set; }
 
-        [Required]
-        public Boolean HasNextEvolution {get; set;}
-        public int? EvCondition { get; set; }
+        public int? EvolutionCondition { get; set; }
+
         public Boolean? EvolutionUnlocked { get; set; }
+
         public string SpriteUrl { get; set; }
+
         public string Type1 { get; set; }
+
         #nullable enable
         public string? Type2 { get; set; }
 
+        public Boolean isMythical { get; set; }
+
+        public Boolean isLegendary { get; set; }
     }
 }

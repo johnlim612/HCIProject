@@ -1,12 +1,14 @@
-﻿@{
+﻿@model IEnumerable<Pikaball.Models.PokemonCollection>
+@{
     ViewData["Title"] = "Play";
 }
+
 <!Doctype html>
 <html>
 <head>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="~/css/play.css" />
-    <script src="~/js/play.js"></script>
+    
 </head>
 <body>
     <div class="summon-text animate-words">Summon a Pokemon!</div>
@@ -14,10 +16,11 @@
     <div class="play-buttons">
         <img class="pokeball" src="~/resources/pokeball3.png" />
         <div class="pokemon-result">
+            <h5 id="loading-text"></h5>
             <img class="summon-pokemon" />
-            <div class="pokemon-label"></div>
             <button class="btn btn-primary endsummon-btn">Next</button>
         </div>
+        <div class="pokemon-label"></div>
     </div>
     <div class="history-container">
         <div id="history-text">History</div>
@@ -25,6 +28,48 @@
             <!--test image element for each history frame-->
         </div>
     </div>
+
+    <!--javascript-->
+    <script src="~/js/api.js"></script>
+    <script>
+
+
+        //rolledPokemon = {
+        //    PokedexID:1,
+        //    name:"bulbasaur",
+        //    description : "While it is young, it uses the nutrients that are stored in the seed on its back in order to grow.",
+        //    level:1,
+        //    EvolutionCondition:16,
+        //    EvolutionUnlocked:false,
+        //    SpriteUrl:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        //    Type1:"Grass",
+        //    Type2: "Poison"
+        //};
+
+        //This the ajax post call that will add or update existing pokemon to the collection
+        function addPokemon() {
+            $.ajax({
+                type: 'POST',
+                traditional: true,
+                url: "@Url.Action("UpdateCollection")",
+                contentType: "application/json; charset=utf-8",
+                datatype: 'json',
+                data: JSON.stringify(rolledPokemon),
+                processData: true,
+                success: function (data) { console.log(data); },
+                failure: function (errMsg) { console.log(errMsg); }
+            });
+        }
+
+        //This function get the latest collection of pokemon of the user.
+        async function updatePokemonCollection() {
+            await $.get("@Url.Action("GetCollection")", (data, status) => {
+                collectedPokemon = data;
+            });
+        }
+
+    </script>
+    <script src="~/js/play.js"></script>
 </body>
 </html>
 
